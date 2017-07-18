@@ -88,3 +88,83 @@ Uses for:
 
 reveal hidden files in terminal: -a
 
+## 01.02 - **Object Oriented Programming**
+
+Classes - **a container of functions related to an idea**
+
+	creates separation of concerns
+	
+	allows to test small snippet of code and move on
+	
+	Very important reasons to use:
+	
+		converse intelligently with software engineers
+	
+		use libaries which have OO design
+	
+		make own code more usable
+
+Thinking OO
+
+	class is a user-defined type i.e. an entity with data and actions
+		
+		on par with float, str, etc
+		
+
+	methods (in Python, also technically a class 'attribute')
+		
+		operations you can perfrom on an instance of the class e.g. sum(object)
+
+	E.g.
+		Class = bikes
+			
+			object = mountain bike
+			
+			object = road bike
+			
+			object = tricycle
+		
+		Class = car
+		
+			object = sports car
+		
+			object = sedan
+
+		However, could do
+		
+		Class = things with wheels
+		
+			object = car
+		
+			object = bike
+
+	Hallmarks
+
+		encapsulation - requires code to namipualte an object's internal state, indrectly, only through method calls
+
+		Really Good Idea to pgroam this way regardless of language:
+
+			write a class to manage a resource
+
+			bundle the resource as part of the class state
+
+			only access the resource via well-defined
+
+		Python does not enforce encapsulation
+			
+			begin with underscore to indicate not to mess - _do_not_touch_me
+
+	**Polymorphism** - treat multiple objects the same if they support same interface
+		
+		'lap water'
+
+			can do on cat or dog
+
+		
+		
+
+	
+	
+
+
+
