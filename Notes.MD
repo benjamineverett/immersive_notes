@@ -1,8 +1,8 @@
 ## Week 1 - Day 1: 01.01
 
-[Git How-To](file:////Users/benjaminreverett/Dropbox/0-galvanize/immersive/Lectures/lecture_01_01_git.pdf)
+[Git How-To](https://github.com/benjamineverett/immersive_notes/blob/master/docs/lecture_01_01_python_intro.pdf)
 
-[intro to python](file:///Users/benjaminreverett/Dropbox/0-galvanize/immersive/Lectures/lecture_01_01_python_intro.pdf)
+[intro to python](https://github.com/benjamineverett/immersive_notes/blob/master/docs/lecture_01_01_python_intro.pdf)
 	
 * anaconda
   *conda create
