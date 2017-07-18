@@ -235,6 +235,8 @@ assert to test preconditions
 
 update slides
 
+[_ and __](https://dbader.org/blog/meaning-of-underscores-in-python)
+
 
 		
 
