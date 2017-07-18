@@ -1,5 +1,3 @@
-##### Notes!!!!
-
 # Precourse Resources:
 
 [SQL guide](https://github.com/benjamineverett/precourse/blob/master/Chapter_3_SQL/resources/create_sql_table.md)
