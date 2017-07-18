@@ -160,7 +160,82 @@ Thinking OO
 
 			can do on cat or dog
 
+	**duck-typing**
+	
+		readability MATTERS
+
+		classes and objects should do what they say they do
+
+Class definitions:
+
+	use 'class' keyword
+
+	capitalize name of chear class (i.e. use CamelCase)
+
+	use 'self' to refer to an instance's own, unique data
+	
+	'self-reference'
+
+		'self.method()' to call methods on same object
 		
+		'self.attribute' to access instance-specific data
+
+	start each emember function's argument list with 'self'
+
+		def my_function(self,.....)
+
+	inheritance
+		
+		class Joker(Card)
+	
+		can call all of parent's method
+
+		child can overwrite methods if want
+
+		check if object belongs to a specificed class 'isinstance()'
+
+	__init__()
+
+		super().__init__() to call base class's __init__() method
+	
+		**always call super class when inheriting**
+
+		class Joker(Card):
+
+[magic methods help](http://www.python-course.eu/python3_magic_methods.php)
+
+**common magic methods**
+
+
+	* __init__ 	constructor
+
+	* __str__	 	defin behaor for str(obj)
+	
+	* __repr__ 	define behavior for repr(obj)
+	
+	* __len__ 	return number of elementds in object
+
+	* __call__ 	call instance like a function
+
+	* __iter__ 	returns an iterable
+
+ 
+assert to test preconditions
+
+
+
+		
+
+##Tips
+	start ipython like this for matplotlib: **ipython --pylab**
+
+##To Review at night
+
+[@property](https://www.blog.pythonlibrary.org/2014/01/20/python-201-properties/)
+
+update slides
+
+
 		
 
 	
