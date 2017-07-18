@@ -6,11 +6,17 @@
 	* insert values
 
 [linear algrebra simple review](https://github.com/benjamineverett/precourse/tree/master/Chapter_2_Linear_Algebra)
+
 [terminal cheat sheet](https://github.com/benjamineverett/immersive_notes/blob/master/docs/terminal_cheat_sheet.txt)
+
 [psql terminal commands](https://github.com/benjamineverett/immersive_notes/blob/master/docs/psql_commands.png)
+
 [markdown cheat sheet](https://github.com/benjamineverett/immersive_notes/blob/master/docs/markdown_cheatsheet.pdf)
+
 [ipython cheat sheet](https://github.com/benjamineverett/immersive_notes/blob/master/docs/iPythonCheatSheet.svg)
+
 [numpy cheat sheet](https://github.com/benjamineverett/immersive_notes/blob/master/docs/Numpy_Python_Cheat_Sheet.pdf)
+
 
 
 	
