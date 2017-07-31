@@ -643,12 +643,12 @@ x!
 ##02.02 - Sampling & Estimation
 
 **Slides**
-[Distribution and Parmeter Estimation](
-[Sampling - Afternoon](
+[Distribution and Parmeter Estimation](https://github.com/benjamineverett/immersive_notes/blob/master/docs/02_02_Distribution_and_Parameter_Estimation.pdf)
+[Sampling - Afternoon](https://github.com/benjamineverett/immersive_notes/blob/master/docs/02_02_Sampling.pdf)
 
-[**Jupyter Notebooks**](
+[**Jupyter Notebooks**](https://github.com/benjamineverett/immersive_notes/tree/master/JupyterNotebooks/02_02_Sampling_Estimation)
 
-[**Solutions**](
+[**Solutions**](https://github.com/gSchool/dsi-solns-g49/tree/master/estimation-sampling)
 
 **Readings**
 	
@@ -665,6 +665,7 @@ x!
 	3. Take random samples many times over...say 1000
 	4. Use this to mean, variance, etc
 
+
 **Central Limit Theorem**
 
 	Sum of out comes of sample size n taken x amount of times.
@@ -675,6 +676,7 @@ x!
 	I'm taking 4 samples from my data, and I'm doing it 100 times.
 	
 
+
 **Estimation Intro**
 
 	Want to use sample of population because we cannot sample entire population
@@ -683,6 +685,8 @@ x!
 	
 	We'd like to be as accurate as possible (of course!)
 	
+
+
 **Method of Moments**
 
 Assume a distribution(Poisson, Bernoulli Binomial, Gaussian)
@@ -693,6 +697,8 @@ Use moments to plot
 
 See this [jupyter notebook](
 
+
+
 **Maximum Likelihood Estimation**
 
 Likelikhood of what? The sample data, given the distribution parameter(s)
@@ -701,13 +707,19 @@ Likelikhood of what? The sample data, given the distribution parameter(s)
 
 Then evidence supports theta 1 over theta 2
 
+
+
 **Maximum a Posteriori (MAP)**
 
 Use Baye's theorem
 
+
+
 **Kernel Density Estimation (KDE)**
 
 What if our data does not match a known distribution
+
+
 
 
 **Bootstrapping**
@@ -720,13 +732,160 @@ Bootstrap Sampling Method:
 
 	1. Start with your dataset of size n
 	2. Sample from your dataset with replacement to create 1 bootstrap sample of size n
-	3. Repeat B times4.Each bootstrap sample can then be used as a separate dataset for estimation and model fitting
+3. Repeat B times. Each bootstrap sample can then be used as a separate dataset for estimation and model fitting
 
 
+##_02.03 - Hypothesis Testing_
+
+**Links**
+(PDF, CDF, PPF, SF)[http://pytolearn.csd.auth.gr/d1-hyptest/11/distros.html]
+
+(Seeing Theory)[http://students.brown.edu/seeing-theory/index.html]
+
+[Latex Formating Symobols - Cheat Sheet](
+
+[Repo](https://github.com/benjamineverett/dsi-ab-testing)
+
+[Z vs. T Statistic](https://www.youtube.com/watch?v=5ABpqVSx33I)
+
+[Hypothesis Testing](https://www.youtube.com/watch?v=-FtlH4svqx4)
+
+**Z-Statistic V t-statistic**
+
+
+\\[z-statistic=\frac{\overline{x} - \mu_\overline{x}}{\sigma_\overline{x}}\\]
+
+\\[\sigma_\overline{x}=\frac{\sigma}{\sqrt{n}}\\]
+
+use z-stat when n > 30
+
+use t-stat when n < 30
+
+**Hypothesis Testing Steps**
+
+
+
+1. Set up null hypothesis - \\[H_0:\\]
+
+2. Set up alternative hypothesis - \\[H_1:\\]
+
+3. Assume null is true. Then we can say, if probability we got results we did is very very small we can reject null hypothesis
+
+
+Ex. Testing drug response time on 100 rats. Mean response for non-injected rats is 1.2 seconds. Mean of 100 rats injected is 1.05 seconds with sample standard deviation of 0.5 seconds. Is drug affecting response time?
+
+Large sample size, so can assume sample standard deviation:
+\\[\sigma_\overline{x}=\frac{0.5}{\sqrt{100}}\\]
+\\[\sigma_\overline{x}=0.05\\]
+\\[z =\frac{1.2 - 1.05}{0.05}\\]
+\\[z=3\\]
+
+\\[z-stat = .9987 \therefore reject..H_0!\\]
+
+**scipy distributions**
+
+	dist = stats.poisson(lambda)
+		dist.pdf
+		dist.rvs
+			.
+			.
+			.
+			.
+
+\\[Z=\frac{\overline{X}-\mu}{\frac{\sigma}{\sqrt{n}}}\\]
+
+**Estimation vs Hypothesis Testing**
+
+We don't say null is true, we state whether we can reject the null
+
+1. State the null(H0) and the alternative (H1) hypothese
+2. Choose level of significance (alpha)
+3. Choose a statistical test and find the test statistic
+4. Draw conclusions
+	1. Reject H0 in favor of H1
+	2. Fail to reject H0 
+
+**One tailed vs two tailed**
+
+Type 1 - False positive - reject null and it is actually true
+Type 2 - Failing to rejet H0 when it is false
+
+
+Proportions - Comparing proportions is a 1 vs. 0 test
+Means - anywhere on a distribution
+
+**t-tests (use Welchs T-test for 2 samples!)**
+
+using scipy returns tuple (t-stat, p-value)
+
+**Example**
+
+H0 - men_heights <= women_heights
+H1 - men > women
+
+Bonferroni Correction = # of comparisons is n choose k
+
+
+##02.04 - Power Analysis and Bayesian Stats
+
+Type I error - False Positive - Alpha Error - Reject H0 when H0 is true - Specificity
 	
-	
-	
-	
+Type II error - False Negative - Beta Error - Do not reject H0 when H0 is false - Sensitivity
+
+**Power:**
+
+\\[Power = 1 - \beta\\]
+
+Power levels of 80-90% considered effective
+
+|  |  Test  |  Test    |
+|-------|:------:|--------:|
+| Test  |   D+          |     D-  |
+|   T+  | CORRECT   | **Type II** |
+| T-	  | **Type I** | CORRECT|
+
+
+![Helpful Graph](https://github.com/benjamineverett/immersive_notes/blob/master/Screen%20Shot%202017-07-27%20at%208.11.54%20AM.png)
+ 
+ **Think Curve:**
+ 
+ to right of threshhold (alpha) is True positive and False Positive
+ 
+ to left is True negative False negative
+ 
+ As move to right of alpha:
+ 
+ decreased sensitivity
+ increased specificity
+
+**Bayes Rule in Statistics**
+
+\\[P(\theta|data) = \frac{P(data|\theta) * P(\theta)}{P(data)}\\]
+
+
+**Main objective**
+
+Define Power
+Factors that influence Power
+Intro to R
+
+\\[1-\beta = \phi[Z_\frac{a}{2} + \frac{\mu_1 - \mu_0}{\sigma}\sqrt{n}]\\]
+
+W/I baysian stats use Monte Carlo method often
+
+
+##02.05 - Multi Armed Bandit
+
+A prior with a beta creates a posterior with a beta
+
+\\[P(y|\theta) \infity p(\theta|y)[(\theta)\\]
+
+
+Goal of multi armed bandit is to maximize rewards or alternatively minimize regret
+
+UCB1 - choose whichever bandit has the largest value
+
+softmax = choose the bandit randomly in properotion to its estimated value
 
 
 
@@ -742,7 +901,8 @@ Bootstrap Sampling Method:
 			      123,456,000.98 <- with #2
 			345,453,2123,9894.98
 
-[File under “stupid Python tricks”: You can use a semicolon to combine statements in series on a single line.](https://docs.python.org/3/reference/compound_stmts.html)
+File under “stupid Python tricks”: You can use a semicolon to combine statements in series [on a single line.](https://docs.python.org/3/reference/compound_stmts.html)
+
 
 
 
@@ -750,6 +910,18 @@ Bootstrap Sampling Method:
 **SATURDAY**
 
 	Review probability distributions and how to identify which distribution to use
+	
+	Review different ways to use z-score and t-statistic
+	
+	Review functional programming in R
+	
+	Update Talent
+	
+	check blog on switching industries
+	
+	
+	
+	
 
 
 
