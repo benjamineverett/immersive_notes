@@ -919,6 +919,31 @@ File under “stupid Python tricks”: You can use a semicolon to combine statem
 	
 	check blog on switching industries
 	
+# Week 3 - Linear Models
+
+##03.02 - Numpy, Linear Regression
+
+vector - 1D numpy array - np.array
+
+Matricies - 2D np.array or np.matrix
+
+**use numpy array by default**
+
+can use split method for arrays
+
+
+
+
+
+
+
+
+**Tips/Tricks**
+
+
+
+**Saturday**
+	
 	
 	
 	
