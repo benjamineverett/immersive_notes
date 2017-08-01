@@ -921,7 +921,7 @@ File under “stupid Python tricks”: You can use a semicolon to combine statem
 	
 # Week 3 - Linear Models
 
-##03.02 - Numpy, Linear Regression
+##03.01 - Numpy, Linear Regression
 
 vector - 1D numpy array - np.array
 
@@ -930,6 +930,26 @@ Matricies - 2D np.array or np.matrix
 **use numpy array by default**
 
 can use split method for arrays
+
+##03.02 - Linear Regression
+
+\\[\beta_0\\] also called alpha in some material
+
+Outcome/Response/Label/Dependent/Endogenous Var.
+
+\\[Y_i = \beta_0 + x_i\beta_1 + \epsilon_i,\epsilon_i \\]
+
+R**2 close to 1 is desirable
+
+Adjusted R**2 penalizes adding more features
+
+removing outliers is usually not a good way to fit model
+
+if end up removing a lot of outliers, try different approach and/or different model
+
+
+
+	
 
 
 
